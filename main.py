@@ -1,10 +1,16 @@
 import random
+# from src import val
 
 def val():
     n = int(input("Escoge una cota superior para adivinar el número: "))
     while (n<=0):
         print("Debe ser un número mayor a 0")
     return n
+
+def cota():
+    print("Quieres escoger tú mismo la cota superior?. Por defecto es 10")
+    cota= str(input("(Y) si es afirmativo o (N) si es negativo: "))
+    return cota
 
 def guess(x):
     intentos = []
@@ -20,4 +26,7 @@ def guess(x):
     print(f"Felicidades. Has adivinado el número {random_number} !!!")
     print(f"Te ha llevado {len(intentos)} intentos.")
 
+# def computer_guess(x):
+    # return a
 guess(val())
+
